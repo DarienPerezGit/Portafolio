@@ -33,7 +33,7 @@ const projects: Project[] = [
         description: "Data quality audit tool for identifying and resolving data quality issues in real-time.",
         tags: ["Python", "SQL", "Excel"],
         year: "2025",
-        image: "/projects/quality-data-project.png",
+        image: "/projects/quality-data-project.PNG",
         link: "https://the-data-quality-auditor-2m8frn964fuutfznjoyiat.streamlit.app/", // Reemplaza con tu link real
     },
     {
@@ -42,7 +42,7 @@ const projects: Project[] = [
         category: "Programacion II",
         description: "System to manage the information that a holding company",
         tags: ["Java", "SpringBoot", "SQL", "HTML/CSS"],
-        year: "2023",
+        year: "2025",
         image: "/projects/cloud-system.jpg",
         link: "https://github.com/tu-usuario/cloud-system", // Reemplaza con tu link real
     },
@@ -51,9 +51,9 @@ const projects: Project[] = [
         title: "Nativas",
         category: "E-commercce",
         description: "Nativas is a premium botanical brand reconnecting the modern world with the ancestral healing power of South America.",
-        tags: ["Next.js", "WebSocket", "Redis", "SupaBase"],
-        year: "2023",
-        image: "/projects/Nativas.png",
+        tags: ["Next.js", "Node.js", "PostgreSQL", "Tailwinds"],
+        year: "2025",
+        image: "/projects/Nativas.PNG",
         link: "https://nativas-two.vercel.app/", // Reemplaza con tu link real
     },
 ];
