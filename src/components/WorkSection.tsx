@@ -43,15 +43,15 @@ const projects: Project[] = [
         description: "System to manage the information that a holding company",
         tags: ["Java", "SpringBoot", "SQL", "HTML/CSS"],
         year: "2025",
-        image: "/projects/cloud-system.jpg",
-        link: "https://github.com/tu-usuario/cloud-system", // Reemplaza con tu link real
+        image: "/projects/Cable_vision_holding.PNGa",
+        link: "https://github.com/darien-perez-utn/cablevision_holding",
     },
     {
         id: 4,
         title: "Nativas",
         category: "E-commercce",
         description: "Nativas is a premium botanical brand reconnecting the modern world with the ancestral healing power of South America.",
-        tags: ["Next.js", "Node.js", "PostgreSQL", "Tailwinds"],
+        tags: ["Next.js", "Node.js", "PostgreSQL", "TailwindCSS", "Vercel"],
         year: "2025",
         image: "/projects/Nativas.PNG",
         link: "https://nativas-two.vercel.app/", // Reemplaza con tu link real
