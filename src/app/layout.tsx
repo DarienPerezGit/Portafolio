@@ -10,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Software Engineer Portfolio | Architecting the Future",
-  description: "Crafting elegant solutions through code. Transforming complex problems into seamless digital experiences.",
+  title: "Darien Portfolio | Just for fun",
+  description: "I like to develop ideas through code.",
 };
 
 export default function RootLayout({
