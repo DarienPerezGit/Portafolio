@@ -23,7 +23,7 @@ const projects: Project[] = [
         description: "A comprehensive financial operating system for tracking crypto assets, exchanges, and wallets with real-time synchronization.",
         tags: ["React Native", "Spring Boot", "PostgreSQL", "Docker"],
         year: "2025",
-        image: "/projects/capital-flow.jpg",
+        image: "/projects/xues.jpg",
         link: "https://github.com/DarienPerezGit/xeus", // Reemplaza con tu link real
     },
     {
@@ -43,7 +43,7 @@ const projects: Project[] = [
         description: "System to manage the information that a holding company",
         tags: ["Java", "SpringBoot", "SQL", "HTML/CSS"],
         year: "2025",
-        image: "/projects/Cable_vision_holding.PNGa",
+        image: "/projects/Cable_vision_holding.PNG",
         link: "https://github.com/darien-perez-utn/cablevision_holding",
     },
     {
