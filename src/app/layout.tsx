@@ -12,6 +12,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Darien Portfolio | Just for fun",
   description: "I like to develop ideas through code.",
+  icons: {
+    icon: "/yo.jpeg",
+  },
 };
 
 export default function RootLayout({
