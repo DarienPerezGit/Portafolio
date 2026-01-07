@@ -3,63 +3,7 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
-// Wave Component for the sophisticated animated lines
-const WaveLine = ({
-  delay,
-  duration,
-  yOffset,
-  opacity,
-  color = "#E0C3FC"
-}: {
-  delay: number;
-  duration: number;
-  yOffset: number;
-  opacity: number;
-  color?: string;
-}) => {
-  return (
-    <motion.div
-      initial={{ pathLength: 0, opacity: 0 }}
-      animate={{
-        pathLength: 1,
-        opacity: opacity
-      }}
-      transition={{
-        duration: 2,
-        delay: delay,
-        ease: "easeInOut"
-      }}
-      className="absolute w-full"
-      style={{ top: `${yOffset}%` }}
-    >
-      <svg
-        viewBox="0 0 1440 320"
-        className="w-full h-auto rotate-0"
-        style={{ minWidth: '800px' }}
-      >
-        <motion.path
-          fill="none"
-          stroke={color}
-          strokeWidth="1.5"
-          d="M0,160 C320,300, 420,0, 740,160 C1060,320, 1120,40, 1440,160"
-          animate={{
-            d: [
-              "M0,160 C320,300, 420,0, 740,160 C1060,320, 1120,40, 1440,160",
-              "M0,160 C320,0, 420,300, 740,160 C1060,0, 1120,320, 1440,160",
-              "M0,160 C320,300, 420,0, 740,160 C1060,320, 1120,40, 1440,160"
-            ]
-          }}
-          transition={{
-            duration: duration,
-            repeat: Infinity,
-            ease: "easeInOut",
-            times: [0, 0.5, 1]
-          }}
-        />
-      </svg>
-    </motion.div>
-  );
-};
+import WaveBackground from './WaveBackground';
 
 export default function HeroSection() {
   const [isHovered, setIsHovered] = useState(false);
@@ -79,30 +23,8 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen bg-[#FFFFFF] overflow-hidden flex items-center">
 
-      {/* Dynamic Background Pattern - Sophisticated Waves */}
-      <div className="absolute top-0 right-0 w-[60%] h-full opacity-60 pointer-events-none translate-x-1/4">
-        {/* Layered waves creating the 'net' effect */}
-        {[...Array(10)].map((_, i) => (
-          <WaveLine
-            key={i}
-            delay={i * 0.2}
-            duration={15 + i}
-            yOffset={10 + (i * 5)}
-            opacity={0.3 - (i * 0.02)}
-            color={i % 2 === 0 ? "#E0C3FC" : "#8EC5FC"}
-          />
-        ))}
-        {[...Array(8)].map((_, i) => (
-          <WaveLine
-            key={`b-${i}`}
-            delay={i * 0.3}
-            duration={20 + i}
-            yOffset={30 + (i * 6)}
-            opacity={0.2}
-            color="#A0A0A0"
-          />
-        ))}
-      </div>
+      {/* Dynamic Background Pattern */}
+      <WaveBackground theme="light" />
 
       {/* Floating Navbar */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-6xl">

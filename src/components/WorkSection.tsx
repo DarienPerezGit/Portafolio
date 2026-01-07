@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import Image from 'next/image';
+import WaveBackground from './WaveBackground';
 
 interface Project {
     id: number;
@@ -64,8 +65,8 @@ export default function WorkSection() {
     return (
         <section id="work" className="relative min-h-screen bg-white py-32 px-8 overflow-hidden">
             {/* Background Gradient Orbs */}
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-[#E0C3FC]/10 to-[#8EC5FC]/10 rounded-full blur-[120px] pointer-events-none" />
-            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-tl from-[#8EC5FC]/10 to-[#E0C3FC]/10 rounded-full blur-[120px] pointer-events-none" />
+            {/* Background Waves */}
+            <WaveBackground theme="light" />
 
             <div className="relative z-10 max-w-7xl mx-auto">
                 {/* Section Header */}

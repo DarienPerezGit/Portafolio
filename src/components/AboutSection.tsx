@@ -2,11 +2,16 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import WaveBackground from './WaveBackground';
 
 export default function AboutSection() {
     return (
         <section id="about" className="relative bg-[#111111] py-32 overflow-hidden">
             {/* Background Gradient - Subtle ambient glow to match the premium dark feeling */}
+            {/* Background Waves */}
+            <WaveBackground theme="dark" />
+
+            {/* Subtle Gradient Overlay for depth */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-b from-[#2a2a2a] to-transparent opacity-30 blur-[120px] pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-t from-[#1a1a1a] to-transparent opacity-30 blur-[120px] pointer-events-none" />
 
