@@ -59,7 +59,7 @@ export default function HeroSection() {
           >
             <span className="text-gray-900">DARIEN</span>
             <br />
-            <span className="text-white"></span>
+            <br />
             <span className="bg-gradient-to-r from-[#E0C3FC] to-[#8EC5FC] bg-clip-text text-transparent">
               PEREZ
             </span>
@@ -81,10 +81,11 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            <button
+            <a
+              href="#work"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
-              className="group relative px-8 py-4 rounded-full overflow-hidden transition-all duration-300"
+              className="group relative px-8 py-4 rounded-full overflow-hidden transition-all duration-300 inline-block"
             >
               {/* Border Gradient */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#E0C3FC] to-[#8EC5FC] p-[2px]">
@@ -98,7 +99,7 @@ export default function HeroSection() {
               <span className={`relative z-10 font-semibold tracking-wide transition-colors duration-300 ${isHovered ? 'text-white' : 'text-gray-900'}`}>
                 VIEW MY WORK
               </span>
-            </button>
+            </a>
           </motion.div>
         </div>
 

@@ -38,9 +38,9 @@ const projects: Project[] = [
     },
     {
         id: 3,
-        title: "FullStack Application",
-        category: "Programacion II",
-        description: "System to manage the information that a holding company",
+        title: "Holding Management System",
+        category: "Enterprise Application",
+        description: "Comprehensive system utilized to manage information flow and resources for a holding company.",
         tags: ["Java", "SpringBoot", "SQL", "HTML/CSS"],
         year: "2025",
         image: "/projects/Cable_vision_holding.PNG",
@@ -49,7 +49,7 @@ const projects: Project[] = [
     {
         id: 4,
         title: "Nativas",
-        category: "E-commercce",
+        category: "E-commerce",
         description: "Nativas is a premium botanical brand reconnecting the modern world with the ancestral healing power of South America.",
         tags: ["Next.js", "Node.js", "PostgreSQL", "TailwindCSS", "Vercel"],
         year: "2025",

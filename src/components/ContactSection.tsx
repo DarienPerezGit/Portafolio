@@ -34,7 +34,7 @@ const contactMethods: ContactMethod[] = [
         icon: 'linkedin',
         title: 'LinkedIn',
         value: 'Darien Perez',
-        link: 'https://twitter.com/darienperez',
+        link: 'https://www.linkedin.com/in/darienperez/',
         description: 'Let\'s connect professionally',
     },
 ];
