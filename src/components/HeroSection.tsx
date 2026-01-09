@@ -79,7 +79,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-[#B3B3B3] text-lg md:text-xl max-w-xl leading-relaxed"
           >
-            Crafting elegant solutions through code. Transforming complex problems into seamless digital experiences.
+
           </motion.p>
 
           {/* CTA Button */}
