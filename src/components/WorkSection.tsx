@@ -4,67 +4,14 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import Image from 'next/image';
 import WaveBackground from './WaveBackground';
-
-interface Project {
-    id: number;
-    title: string;
-    category: string;
-    description: string;
-    tags: string[];
-    year: string;
-    image?: string; // URL de la imagen del proyecto
-    link?: string; // URL del proyecto (puede ser GitHub, demo en vivo, etc.)
-}
-
-const projects: Project[] = [
-    {
-        id: 1,
-        title: "Xeus",
-        category: "FinTech Platform",
-        description: "A comprehensive financial operating system for tracking crypto assets, exchanges, and wallets with real-time synchronization.",
-        tags: ["React Native", "Spring Boot", "PostgreSQL", "Docker"],
-        year: "2025",
-        image: "/projects/xues.jpg",
-        link: "https://github.com/DarienPerezGit/xeus", // Reemplaza con tu link real
-    },
-    {
-        id: 2,
-        title: "The Data Quality Auditor",
-        category: "QA + Data Engineering",
-        description: "Data quality audit tool for identifying and resolving data quality issues in real-time.",
-        tags: ["Python", "SQL", "Excel"],
-        year: "2025",
-        image: "/projects/quality-data-project.PNG",
-        link: "https://the-data-quality-auditor-2m8frn964fuutfznjoyiat.streamlit.app/", // Reemplaza con tu link real
-    },
-    {
-        id: 3,
-        title: "Holding Management System",
-        category: "Enterprise Application",
-        description: "Comprehensive system utilized to manage information flow and resources for a holding company.",
-        tags: ["Java", "SpringBoot", "SQL", "HTML/CSS"],
-        year: "2025",
-        image: "/projects/Cable_vision_holding.PNG",
-        link: "https://github.com/darien-perez-utn/cablevision_holding",
-    },
-    {
-        id: 4,
-        title: "Nativas",
-        category: "E-commerce",
-        description: "Nativas is a premium botanical brand reconnecting the modern world with the ancestral healing power of South America.",
-        tags: ["Next.js", "Node.js", "PostgreSQL", "TailwindCSS", "Vercel"],
-        year: "2025",
-        image: "/projects/Nativas.PNG",
-        link: "https://nativas-two.vercel.app/", // Reemplaza con tu link real
-    },
-];
+import { projects } from '@/data/projects';
+import { Icons } from '@/components/ui/Icons';
 
 export default function WorkSection() {
     const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
     return (
         <section id="work" className="relative min-h-screen bg-white py-32 px-8 overflow-hidden">
-            {/* Background Gradient Orbs */}
             {/* Background Waves */}
             <WaveBackground theme="light" />
 
@@ -116,23 +63,11 @@ export default function WorkSection() {
                                             className="object-cover transition-transform duration-500 group-hover:scale-110"
                                         />
                                     ) : (
-                                        // Placeholder cuando no hay imagen
+                                        // Placeholder when no image
                                         <div className="absolute inset-0 flex items-center justify-center">
                                             <div className="text-center">
                                                 <div className="w-20 h-20 mx-auto mb-4 border-2 border-gray-300 rounded-lg flex items-center justify-center">
-                                                    <svg
-                                                        className="w-10 h-10 text-gray-400"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        viewBox="0 0 24 24"
-                                                    >
-                                                        <path
-                                                            strokeLinecap="round"
-                                                            strokeLinejoin="round"
-                                                            strokeWidth={1.5}
-                                                            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                                                        />
-                                                    </svg>
+                                                    <Icons.Image className="w-10 h-10 text-gray-400" />
                                                 </div>
                                                 <p className="text-gray-400 text-sm font-medium">Project Preview</p>
                                             </div>
@@ -193,23 +128,14 @@ export default function WorkSection() {
                                                 className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
                                             >
                                                 <span>View Project</span>
-                                                <motion.svg
+                                                <motion.div
                                                     animate={{
                                                         x: hoveredProject === project.id ? 5 : 0,
                                                     }}
                                                     transition={{ duration: 0.3 }}
-                                                    className="w-4 h-4"
-                                                    fill="none"
-                                                    stroke="currentColor"
-                                                    viewBox="0 0 24 24"
                                                 >
-                                                    <path
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        strokeWidth={2}
-                                                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                                                    />
-                                                </motion.svg>
+                                                    <Icons.ArrowRight className="w-4 h-4" />
+                                                </motion.div>
                                             </a>
                                         )}
                                     </div>
@@ -245,7 +171,12 @@ export default function WorkSection() {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="mt-16 flex justify-center"
                 >
-                    <button className="group relative px-8 py-4 rounded-full overflow-hidden transition-all duration-300">
+                    <a
+                        href="https://github.com/DarienPerezGit?tab=repositories"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative px-8 py-4 rounded-full overflow-hidden transition-all duration-300"
+                    >
                         {/* Border Gradient */}
                         <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#E0C3FC] to-[#8EC5FC] p-[2px]">
                             <div className="w-full h-full rounded-full bg-white transition-all duration-300 group-hover:opacity-0" />
@@ -256,9 +187,9 @@ export default function WorkSection() {
 
                         {/* Button Text */}
                         <span className="relative z-10 font-semibold tracking-wide transition-colors duration-300 text-gray-900 group-hover:text-white">
-                            VIEW ALL PROJECTS
+                            VIEW PROFILES
                         </span>
-                    </button>
+                    </a>
                 </motion.div>
             </div>
 
@@ -267,3 +198,4 @@ export default function WorkSection() {
         </section>
     );
 }
+
