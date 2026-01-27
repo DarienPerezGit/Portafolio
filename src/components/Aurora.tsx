@@ -123,17 +123,16 @@ export default function Aurora({
         vec3 color = mix(uColorStops[0], uColorStops[1], st.y + n * 0.2);
         color = mix(color, uColorStops[2], st.x + n * 0.2);
         
-        // Apply blend (opacity/mix with background assumption)
-        // Here we just output the color with alpha
+        // Final color adjustment with reduced intensity
+        vec3 finalColor = color + aurora * 0.2;
         
-        // Vignette / fade to transparent at edges?
-        // Let's just output the gorgeous colors
+        // Create vertical fade-out gradient (stronger at bottom)
+        // Fade starts at 60% height and goes to 0 at bottom
+        float verticalFade = smoothstep(0.0, 0.6, st.y);
         
-        // Final color adjustment
-        vec3 finalColor = color + aurora * 0.3;
-        
-        // Adjust alpha based on intensity or blend
-        float alpha = uBlend + aurora * 0.5;
+        // Adjust alpha based on intensity, blend, and vertical position
+        float baseAlpha = uBlend * 0.7; // Reduced base opacity
+        float alpha = (baseAlpha + aurora * 0.3) * verticalFade;
         
         gl_FragColor = vec4(finalColor, alpha);
       }
