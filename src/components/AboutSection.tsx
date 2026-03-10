@@ -24,7 +24,7 @@ export default function AboutSection() {
                         <div className="aspect-[3/4] relative rounded-3xl overflow-hidden shadow-2xl">
                             {/* Image */}
                             <Image
-                                src="/yo.jpeg"
+                                src="/yop.jpeg"
                                 alt="Darien Perez"
                                 fill
                                 className="object-cover hover:scale-105 transition-transform duration-700"
